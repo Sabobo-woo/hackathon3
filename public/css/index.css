@@ -47,6 +47,11 @@ body {
     margin-bottom: 1em;
 }
 
+/* .create button {
+    border: 1px solid #AA8B56;
+    background-color: #AA8B56;
+} */
+
 .header {
     display: flex;
     flex-direction: row;
@@ -108,4 +113,5 @@ svg:hover {
 img {
     height: 50%;
     width: 60%;
+    border: 2px solid black;
 }
