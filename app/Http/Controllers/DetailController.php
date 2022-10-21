@@ -29,4 +29,26 @@ class DetailController extends Controller
             'pets' => $pet_results
         ]);
     }
+
+    public function animalDetail()
+    { 
+        $animal_results = DB::selectone("
+        SELECT *
+        FROM `animals`
+        INNER JOIN `images`
+            ON `animals`.`image_id` = `images`.`id`
+        WHERE `image_id` = ?
+        ", [15]); // gets the requested animal from the database
+
+        $animal_owner = DB::selectone("
+        SELECT *
+        FROM `owners`
+        WHERE `id` = ?
+        ", [$animal_results->owner_id]); // gets owner based on animal_results value of owner_id
+
+        return view('detail.animal-detail', [
+            'animal' => $animal_results,
+            'owner' => $animal_owner
+        ]); // passes variables to the view
+    }
 }

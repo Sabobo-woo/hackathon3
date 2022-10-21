@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/owner-detail', ['App\Http\Controllers\DetailController', 'ownerDetail']);
+Route::get('/animal-detail', ['App\Http\Controllers\DetailController', 'animalDetail']);
+
