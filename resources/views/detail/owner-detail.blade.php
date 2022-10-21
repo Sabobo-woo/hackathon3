@@ -13,23 +13,27 @@
 </head>
 
 <body>
-    <h1>
-        <?= $owner->first_name ?> <?= $owner->surname ?>
-    </h1>
+    <div class="container">
+        <h1>
+            <?= $owner->first_name ?> <?= $owner->surname ?>
+        </h1>
 
-    <p>Email: </p>
-    <p>Phone: </p>
-    <p>Address: </p>
+        <p>Email: </p>
+        <p>Phone: </p>
+        <p>Address: </p>
 
-    <h2>Animals:</h4>
-    <ol>
-        <?php foreach ($pets as $pet) : ?>
-            <li>
-                <a href="/animal-detail/{{$pet->id}}"><?= $pet->name ?></a> (<?= $pet->species ?>) | <?= $pet->breed ?>, Age: <?= $pet->age ?>, Weight: <?= $pet->weight ?>
-            </li>
-            <br><img src={{ asset("/images/pets/".$pet->path) }} alt = "<?= $pet->name ?>">
-        <?php endforeach ; ?>
-    </ol>
+        <h2>Animals:</h4>
+        <ol>
+            <?php foreach ($pets as $pet) : ?>
+                <li>
+                    <a href="/animal-detail/{{$pet->id}}"><?= $pet->name ?></a> (<?= $pet->species ?>) |
+                     <?= $pet->breed ?>, Age: <?= $pet->age ?>, Weight: <?= $pet->weight ?>
+                </li>
+                <br><img src={{ asset("/images/pets/".$pet->path) }} alt = "<?= $pet->name ?>">
+            <?php endforeach ; ?>
+        </ol>
+        <a class="home" href="/home">Home</a>
+    </div>
 
 
 

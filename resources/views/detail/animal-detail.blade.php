@@ -13,6 +13,7 @@
 </head>
 
 <body>
+  <div class="container">
     <h1>
         <?= $animal->name ?> (<?= $animal->species ?>)
     </h1>
@@ -22,7 +23,8 @@
     <p>Age: <?= $animal->age ?></p>
     <p>Weight: <?= $animal->weight ?></p>
     <img src={{ asset("/images/pets/".$animal->path) }} alt = "<?= $animal->name ?>">
-
+    <a class="home" href="/home">Home</a>
+  </div>
 
 </body>
 
