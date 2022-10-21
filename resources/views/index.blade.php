@@ -12,5 +12,10 @@
         <input type="text" name="search" value="">
         <button type="submit">Search</button>
     </form>
+
+    
+    <form action="{{route('animals.create')}}" method="get">
+        <button type="submit">Create a New Record</button>
+    </form>
 </body>
 </html>
