@@ -51,6 +51,7 @@ class SearchController extends Controller
             'search_term' => $search_term,
             'results_animals' => $results_animals,
             'results_owners' => $results_owners,
+            
         ]);
     }
 

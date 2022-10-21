@@ -15,7 +15,7 @@
     <li><a href="/animal-detail/{{$animal->id}}"> <?= $animal->name ?></a>
        <ul>
         <li>Breed: <?= $animal->breed ?></li>
-        <li>Owner Name: <?= $animal->owner->first_name?> <?= $animal->owner->surname?></li>
+        <li>Owner Name: <a href="/owner-detail/{{$animal->owner->id}}"><?= $animal->owner->first_name?> <?= $animal->owner->surname?></a></li>
         <li><img src="/images/pets/<?= $animal->image->path?>" alt = "<?= $animal->name ?>"></li></li>
        </ul>
     </li>
