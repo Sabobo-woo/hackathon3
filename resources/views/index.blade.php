@@ -28,6 +28,10 @@
         <button type="submit">Search</button>
     </form>
 
+    
+    <form action="{{route('animals.create')}}" method="get">
+        <button type="submit">Create a New Record</button>
+    </form>
     <div style="width:10px; heigth:auto; display:flex; flex-direction:row">{{$animals->links()}}</div>
 
 </body>
