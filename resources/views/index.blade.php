@@ -21,23 +21,29 @@
         </div>
     </div>
 
+    <div class="create">
+        <form action="{{route('animals.create')}}" method="get">
+            <button type="submit">Create a New Record</button>
+        </form>
+    </div>
 
     <div class="animals">
         <?php foreach($animals as $animal) : ?>
             <div class="animal">
                 <h4><a href="/animal-detail/{{$animal->id}}"> <?= $animal->name ?> </a></h4>
-                <ul>
-                    <li>Breed: <?= $animal->breed ?></li>
-                    <li>Owner: 
+                    <p>Breed: <?= $animal->breed ?></p>
+                    <p>Owner: 
                         <a href="/owner-detail/{{$animal->owner->id}}">
                             <?= $animal->owner->first_name?> <?= $animal->owner->surname?>
                         </a>
-                    </li>
+
+                    </p>
                     @if ($animal->image)
                     <img src="/images/pets/<?= $animal->image->path?>" alt = "<?= $animal->name ?>">
                     @endif
-                </ul>
-                </li>
+
+
+
             </div>
         <?php endforeach; ?>
     </div>
@@ -46,9 +52,6 @@
         <div>{{$animals->links()}}</div>
     </div>
     
-    <form action="{{route('animals.create')}}" method="get">
-        <button type="submit">Create a New Record</button>
-    </form>
 
 
 </body>

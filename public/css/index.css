@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    font-family: Verdana;
 }
 
 *,
@@ -19,6 +20,7 @@ body {
     justify-content: space-evenly;
     margin-left: 15%;
     margin-right: 15%;
+    margin-bottom: 2em;
 }
 
 .animal {
@@ -26,7 +28,7 @@ body {
     background-color: #AA8B56;
     width: 35%;
     margin: 1em;
-    padding: 1em;
+    padding-left: 2em;
 }
 
 .animal a {
@@ -37,6 +39,18 @@ body {
 .animal a:hover {
     text-decoration: underline;
 }
+
+.create {
+    width: 10%;
+    margin-left: 45%;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+/* .create button {
+    border: 1px solid #AA8B56;
+    background-color: #AA8B56;
+} */
 
 .header {
     display: flex;
@@ -59,12 +73,45 @@ body {
     background-color: #4E6C50;
 }
 
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav p {
+    padding-left: 1.5em;
+}
+
+.flex-1 {
+    width: 90%;
+    padding-left: 25%;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
 svg {
-    height: 10px;
-    width: 10px;
+    height: 25px;
+    width: 25px;
+    color: black;
+}
+
+svg:hover {
+    color: blue;
 }
 
 img {
     height: 50%;
     width: 60%;
+    border: 2px solid black;
 }
