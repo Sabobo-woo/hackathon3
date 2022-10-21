@@ -21,7 +21,7 @@
     <p>Breed: <?= $animal->breed ?></p>
     <p>Age: <?= $animal->age ?></p>
     <p>Weight: <?= $animal->weight ?></p>
-    <img src="http://www.hackathon3.test/images/pets/<?= $animal->path ?>" alt = "<?= $animal->name ?>">
+    <img src={{ asset("/images/pets/".$animal->path) }} alt = "<?= $animal->name ?>">
 
 
 </body>
