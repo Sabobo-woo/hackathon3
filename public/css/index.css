@@ -1,0 +1,70 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: #F0EBCE;
+}
+
+.animals {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.animal {
+    border: 1px solid #AA8B56;
+    background-color: #AA8B56;
+    width: 35%;
+    margin: 1em;
+    padding: 1em;
+}
+
+.animal a {
+    color: #395144;
+    text-decoration: none;
+}
+
+.animal a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 2em;
+    background-color: #4E6C50;
+    color: white;
+}
+
+.header form {
+    padding-top: 2em;
+    padding-right: 2em;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #4E6C50;
+}
+
+svg {
+    height: 10px;
+    width: 10px;
+}
+
+img {
+    height: 50%;
+    width: 60%;
+}

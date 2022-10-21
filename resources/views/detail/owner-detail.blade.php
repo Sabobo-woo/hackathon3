@@ -8,8 +8,7 @@
   <title>
     <?= $owner->first_name ?> <?= $owner->surname ?>
   </title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="/css/owner-detail.css">
 
 </head>
 
