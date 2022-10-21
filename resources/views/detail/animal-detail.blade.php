@@ -17,7 +17,7 @@
     <h1>
         <?= $animal->name ?> (<?= $animal->species ?>)
     </h1>
-    <h4>Owner: <a href="/owner-detail"><?= $owner->first_name ?> <?= $owner->surname ?></a></h4>
+    <h4>Owner: <a href="/owner-detail/{{$owner->id}}"><?= $owner->first_name ?> <?= $owner->surname ?></a></h4>
     
     <p>Breed: <?= $animal->breed ?></p>
     <p>Age: <?= $animal->age ?></p>

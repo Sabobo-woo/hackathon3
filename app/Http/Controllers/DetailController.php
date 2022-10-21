@@ -8,13 +8,13 @@ use Illuminate\Support\Facades\DB;
 
 class DetailController extends Controller
 {
-    public function ownerDetail()
+    public function ownerDetail($id)
     {
         $owner_results = DB::selectone("
         SELECT *
         FROM `owners`
         WHERE `id` = ?
-        ", [11]);
+        ", [$id]);
 
         $pet_results = DB::select("
         SELECT *
@@ -22,7 +22,7 @@ class DetailController extends Controller
         INNER JOIN `images`
             ON `animals`.`image_id` = `images`.`id`
         WHERE `owner_id` = ?
-        ", [11]);
+        ", [$id]);
 
         return view('detail.owner-detail', [
             'owner' => $owner_results,
