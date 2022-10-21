@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/create-form.css">
     <title>{{ $animal->id ? 'Edit record' : 'Create record'}}</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
         @method('PUT')
 
     @else
-        <form action='{{route('animals.store')}}' method="post">
+        <form action='{{route('animals.store')}}' method="post" id="dogform">
     @endif
             @csrf
         
@@ -33,12 +33,12 @@
             <label>Species:</label><br>
             <input type="text" name="species" value="{{ old('species', $animal->species) }}"><br>
 
-            <label>Breed:</label><br>
+            <label for="breed">Breed:</label><br>
             <input type="text" name="breed" value="{{ old('breed', $animal->breed) }}"><br>
-
+   
             <label>Age:</label><br>
             <input type="text" name="age" value="{{ old('age', $animal->age) }}"> years<br>
-
+            <br>
             <label>Weight:</label><br>
             <input type="text" name="weight" value="{{ old('weight', $animal->weight) }}"> kg<br>
             <br>

@@ -33,7 +33,9 @@
                             <?= $animal->owner->first_name?> <?= $animal->owner->surname?>
                         </a>
                     </li>
+                    @if ($animal->image)
                     <img src="/images/pets/<?= $animal->image->path?>" alt = "<?= $animal->name ?>">
+                    @endif
                 </ul>
                 </li>
             </div>

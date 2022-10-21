@@ -24,6 +24,10 @@
     <img src={{ asset("/images/pets/".$animal->path) }} alt = "<?= $animal->name ?>">
 
 
+    <form action='{{route('animals.edit', $animal->id)}}' method="get">
+      @csrf
+      <button type='sumbit'>Edit</button>
+    </form>
 </body>
 
 </html>

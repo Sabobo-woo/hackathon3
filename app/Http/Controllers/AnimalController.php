@@ -35,6 +35,7 @@ class AnimalController extends Controller
             'weight' => 'The weight must be a numeric value'
         ]);
 
+
         $animal = Animal::findOrFail($id);
         $animal->image_id = $request->input('image_id');
         $animal->owner_id = $request->input('owner_id');
@@ -44,6 +45,8 @@ class AnimalController extends Controller
         $animal->age = $request->input('age');
         $animal->weight = $request->input('weight');
         $animal->save();
+
+       
         
         session()->flash('success_message', 'The record was successfully edited.');
         return redirect()->route('animals.edit', $animal->id);
@@ -61,6 +64,8 @@ class AnimalController extends Controller
             'age.numeric' => 'The age must be a numeric value',
             'weight' => 'The weight must be a numeric value'
         ]);
+
+        $request->input('breed');
 
         $animal = new Animal;
         $animal->image_id = $request->input('image_id');
