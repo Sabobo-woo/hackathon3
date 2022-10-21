@@ -8,8 +8,7 @@
   <title>
     <?= $animal->name ?>
   </title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="/css/animal-detail.css">
 
 </head>
 
@@ -22,7 +21,7 @@
     <p>Breed: <?= $animal->breed ?></p>
     <p>Age: <?= $animal->age ?></p>
     <p>Weight: <?= $animal->weight ?></p>
-    <img src="http://www.hackathon3.test/images/pets/<?= $animal->path ?>" alt = "<?= $animal->name ?>">
+    <img src={{ asset("/images/pets/".$animal->path) }} alt = "<?= $animal->name ?>">
 
 
 </body>

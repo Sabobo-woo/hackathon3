@@ -8,8 +8,7 @@
   <title>
     <?= $owner->first_name ?> <?= $owner->surname ?>
   </title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="/css/owner-detail.css">
 
 </head>
 
@@ -28,7 +27,7 @@
             <li>
                 <a href="/animal-detail/{{$pet->id}}"><?= $pet->name ?></a> (<?= $pet->species ?>) | <?= $pet->breed ?>, Age: <?= $pet->age ?>, Weight: <?= $pet->weight ?>
             </li>
-            <br> <img src="http://www.hackathon3.test/images/pets/<?= $pet->path ?>" alt = "<?= $pet->name ?>">
+            <br><img src={{ asset("/images/pets/".$pet->path) }} alt = "<?= $pet->name ?>">
         <?php endforeach ; ?>
     </ol>
 
