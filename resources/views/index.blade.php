@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -23,5 +24,13 @@
     </ul>
 
     <div style="width:10px; heigth:auto; display:flex; flex-direction:row">{{$animals->links()}}</div>
+
+
+    <form action="{{route('search')}}" method="get">
+        <h3>Search forName:</h3>
+        <input type="text" name="search" value="">
+        <button type="submit">Search</button>
+    </form>
+
 </body>
 </html>
