@@ -11,13 +11,13 @@
     <h2>Results in the database of dogs:</h2>
         <ul>
         @foreach($results_animals as $animal)
-            <li>{{$animal->name}}</li>
+            <li><a href="/animal-detail/{{$animal->id}}">{{$animal->name}}</a></li>
         @endforeach
         </ul>
     <h2>Results in the database of owners:</h2>
         <ul>
         @foreach($results_owners as $owner)
-            <li>{{$owner->surname ? $owner->first_name.' '.$owner->surname : $owner->first_name.' '.$owner->surname}}</li>
+            <li><a href="/owner-detail/{{$owner->id}}">{{$owner->surname ? $owner->first_name.' '.$owner->surname : $owner->first_name.' '.$owner->surname}}</a></li>
         @endforeach
         </ul>
 </body>

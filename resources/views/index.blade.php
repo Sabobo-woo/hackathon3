@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <!-- <h1>Welcome to our cute animal database</h1> -->
+
     <div class="animals">
         <?php foreach($animals as $animal) : ?>
             <div class="animal">
@@ -43,6 +43,11 @@
     <div class="footer">
         <div>{{$animals->links()}}</div>
     </div>
+    
+    <form action="{{route('animals.create')}}" method="get">
+        <button type="submit">Create a New Record</button>
+    </form>
+
 
 </body>
 </html>
