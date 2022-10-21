@@ -12,8 +12,7 @@
       <ul>
     <?php foreach($animals as $animal) : ?>
   
-    <li>
-       <?= $animal->name ?>
+    <li><a href="/animal-detail/{{$animal->id}}"> <?= $animal->name ?></a>
        <ul>
         <li>Breed: <?= $animal->breed ?></li>
         <li>Owner Name: <?= $animal->owner->first_name?> <?= $animal->owner->surname?></li>
@@ -23,14 +22,13 @@
     <?php endforeach; ?>
     </ul>
 
-    <div style="width:10px; heigth:auto; display:flex; flex-direction:row">{{$animals->links()}}</div>
-
-
-    <form action="{{route('search')}}" method="get">
+        <form action="{{route('search')}}" method="get">
         <h3>Search forName:</h3>
         <input type="text" name="search" value="">
         <button type="submit">Search</button>
     </form>
+
+    <div style="width:10px; heigth:auto; display:flex; flex-direction:row">{{$animals->links()}}</div>
 
 </body>
 </html>

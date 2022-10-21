@@ -30,15 +30,15 @@ class DetailController extends Controller
         ]);
     }
 
-    public function animalDetail()
+    public function animalDetail($id)
     { 
         $animal_results = DB::selectone("
         SELECT *
         FROM `animals`
         INNER JOIN `images`
             ON `animals`.`image_id` = `images`.`id`
-        WHERE `image_id` = ?
-        ", [15]); // gets the requested animal from the database
+        WHERE `animals`.`id` = ?
+        ", [$id]); // gets the requested animal from the database
 
         $animal_owner = DB::selectone("
         SELECT *

@@ -24,6 +24,6 @@ Route::get('/home', ['App\Http\Controllers\IndexController', 'animals']);
 
 Route::get('/search', ['App\Http\Controllers\SearchController', 'search'])->name('search');
 Route::get('/owner-detail', ['App\Http\Controllers\DetailController', 'ownerDetail']);
-Route::get('/animal-detail', ['App\Http\Controllers\DetailController', 'animalDetail']);
+Route::get('/animal-detail/{id}', ['App\Http\Controllers\DetailController', 'animalDetail']);
 
 
